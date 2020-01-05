@@ -2,13 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ "//css/index.css" | prepend: site.baseurl }}">
+    <title>{{ page.title | append: " | FlyCloudC Blog" }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/index.css" | prepend: site.baseurl }}">
   </head>
   <body>
     
     <nav>
-      <a href="/">Home</a>
+      <ul class:"navbar">
+      {% for page in site.pages %}{% if page.nav %}
+        <li>
+          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+        </li>
+      {% endif %}{% endfor %}
+      </ul>
     </nav>
     
     <section>
