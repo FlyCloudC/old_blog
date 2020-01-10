@@ -5,37 +5,9 @@ nav: true
 ---
 <h2>About</h2>
 <script>
-alert(0);
-function awsl()
-{
-	alert(1);
-var xmlhttp;
-alert(2);
-if (window.XMLHttpRequest)
-  {// code for IE7+, Firefox, Chrome, Opera, Safari
-  xmlhttp=new XMLHttpRequest();
-  }
-else
-  {// code for IE6, IE5
-  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  alert(3);
-xmlhttp.onreadystatechange=function()
-alert(xmlhttp.readyState+" "+xmlhttp.status);
-  {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
-    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-    }
-  }
-  alert(4);
-xmlhttp.open("GET","/ajax/test1.txt",true);
-xmlhttp.send();alert(5);
-}
+alert();
 </script>
-<p>
-  unfinish
-</p>
 <a onclick="awsl()">test ajax</a>
 <button onclick="awsl()">test ajax</button>
+<button onclick="alert()">test</button>
 <div id="myDiv">aa</div>
