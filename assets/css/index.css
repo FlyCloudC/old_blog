@@ -1,43 +1,45 @@
-body{
+body {
   margin: 0;
   padding: 0;
 }
 
-nav{
-  position: fixed;
-  background-color: #0ad;
-  width: 100%;
-  height: 60px;
-}
-
-nav ul{
-  width: 100%;
-  height: 60px;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  float: right;
+nav {
+  position: sticky;
+  top: 0;
   overflow: hidden;
-}
-
-nav li{
-  float: left;
-}
-
-nav a{
-  display: block;
-  width: 60px;
-  background-color: #036;
-}
-
-section{
-  background-color: #0cf;
-}
-
-footer{
-  margin: 0;
-  padding: 20px 0px;
-  background-color: #0ad;
   width: 100%;
-  height: auto;
+  background-color: #19388a;
+}
+
+nav a {
+  display: block;
+  float: right;
+  width: 60px;
+  padding: 10px 14px;
+  color: #fff;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:active {
+  animation: ontouch 0.5s;
+}
+
+@keyframes ontouch {
+  0% { background-color: #19388a; }
+  100% { background-color: #0c5fb0; }
+}
+
+section {
+  height: 3000px;
+  background-color: #3ad;
+  border-top: 1px solid #3ad;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: #19388a;
+  color: #fff;
+  text-align: center;
 }

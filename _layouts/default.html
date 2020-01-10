@@ -2,28 +2,22 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | append: " | FlyCloudC Blog" }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/index.css" | prepend: site.baseurl }}">
   </head>
   <body>
-    
     <nav>
-      <ul>
       {% for page in site.pages %}{% if page.nav %}
-        <li>
-          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </li>
+      <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
       {% endif %}{% endfor %}
-      </ul>
     </nav>
-    
     <section>
       {{ content }}
     </section>
-    
     <footer>
       Copyright &copy FLYC飘云 2020
     </footer>
-    
   </body>
 </html>
