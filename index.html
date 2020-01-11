@@ -1,9 +1,11 @@
 ﻿---
 layout: default
-title: Home
-nav: true
+title: 我的Blog
 ---
-<h2>hey</h2>
-<p>
-  QAQ!!!
-</p>
+<h2>{{ page.title }}</h2>
+<p>最新文章</p>
+<ul>
+　　{% for post in site.posts %}
+　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　{% endfor %}
+</ul>
