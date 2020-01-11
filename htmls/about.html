@@ -5,9 +5,19 @@ nav: true
 ---
 <h2>About</h2>
 <script>
-alert();
+let aj = new XMLHttpRequest();
+alert(aj);
+function xd() {
+  aj.onreadystatechange = () => {
+    alert(aj.readyState+" "+aj.status);
+    if (aj.readyState == 4 && aj.status == 200)
+      alert(aj.responseText);
+  }
+  aj.open("GET", "/ajax/test1.txt", true);
+  aj.send();
+}
 </script>
-<a onclick="awsl()">test ajax</a>
-<button onclick="awsl()">test ajax</button>
+<a onclick="aj()">test ajax</a>
+<button onclick="aj()">test ajax</button>
 <button onclick="alert()">test</button>
 <div id="myDiv">aa</div>
