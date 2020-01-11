@@ -1,4 +1,4 @@
-body {
+﻿body {
   margin: 0;
   padding: 0;
 }
@@ -16,25 +16,53 @@ nav a {
   float: right;
   width: 60px;
   padding: 10px 14px;
+  transition: 0.3s;
   color: #fff;
   font-size: 1.2em;
   text-align: center;
   text-decoration: none;
 }
 
-nav a:active {
-  animation: ontouch 0.5s;
+nav a:hover {
+  background-color: #0c5fb0;
 }
 
-@keyframes ontouch {
+@keyframes onhover {
   0% { background-color: #19388a; }
   100% { background-color: #0c5fb0; }
 }
 
 section {
-  height: 3000px;
+  min-height: 90%;
   background-color: #3ad;
   border-top: 1px solid #3ad;
+}
+
+.article {
+  max-height: 200px;
+  max-width: 700px;
+  margin: 50px auto;
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px 0 #0006;
+}
+
+.article:hover { box-shadow: 0 10px 20px 0 #0006; }
+
+.article h2 {
+  margin: 0;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  background-color: #0847a0;
+  color: #fff;
+}
+
+.article p {
+  margin: 0;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  background-color: #16b;
+  color: #ccc;
 }
 
 footer {
