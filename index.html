@@ -3,6 +3,7 @@ layout: default
 title: Home
 nav: true
 ---
+
 {% for post in site.posts %}
   <div class="article" onclick="window.open('{{ post.url | prepend: site.baseurl }}','_self')">
     <h2>{{ post.title }}</h2>
