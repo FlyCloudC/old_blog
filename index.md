@@ -5,7 +5,9 @@ nav: true
 ---
 {% for page  in site.posts %}
 <div class="article">
-  <h2>{{ page.title }}</h2>
-  <p>{{ page.content | strip_html | truncate:200 }}</p>
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <h2>{{ page.title }}</h2>
+    <p>{{ page.content | strip_html | truncate:200 }}</p>
+  </a>
 </div>
 {% endfor %}
