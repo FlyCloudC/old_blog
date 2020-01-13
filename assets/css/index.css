@@ -1,4 +1,6 @@
-﻿body {
+﻿html, body {
+  height: 100%;
+  weith: 100%;
   margin: 0;
   padding: 0;
 }
@@ -33,14 +35,14 @@ nav a:hover {
 }
 
 section {
-  min-height: 90%;
+  min-height: 100%;
+  padding: 1px 0;
   background-color: #3ad;
-  border-top: 1px solid #3ad;
 }
 
 .article {
   max-height: 200px;
-  max-width: 700px;
+  max-width: 75%;
   margin: 50px auto;
   border-radius: 20px;
   transition: 0.3s;
@@ -49,7 +51,10 @@ section {
 
 .article:hover { box-shadow: 0 10px 20px 0 #0006; }
 
-.article a { text-decoration: none; }
+.article a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
 .article h2 {
   margin: 0;
