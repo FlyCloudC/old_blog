@@ -1,7 +1,11 @@
-﻿body {
+﻿html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
 }
+
+body { background-color: #3ad;}
 
 nav {
   position: sticky;
@@ -23,25 +27,44 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
-  background-color: #0c5fb0;
+nav a:hover { background-color: #0c5fb0; }
+
+.row {
+  min-height: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes onhover {
-  0% { background-color: #19388a; }
-  100% { background-color: #0c5fb0; }
+.sidebar-sec { width: 25%; }
+
+.article-sec { width: 60%; }
+
+@media screen and (max-width: 700px) {
+  .sidebar-sec { display: none; }
+  .article-sec { width: 80%; }
 }
 
-section {
-  min-height: 90%;
-  background-color: #3ad;
-  border-top: 1px solid #3ad;
+.sidebar {
+  margin: 50px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #135;
+  color: #eee;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px 0 #0006;
+  font-family: "SimHei";
+  text-align: center;
+}
+
+.avatar {
+  margin: 50px auto;
+  display: block;
+  border: 3px solid #258;
+  border-radius: 50%;
 }
 
 .article {
-  max-height: 200px;
-  max-width: 700px;
-  margin: 50px auto;
+  margin: 50px 0;
   border-radius: 20px;
   transition: 0.3s;
   box-shadow: 0 5px 10px 0 #0006;
@@ -49,7 +72,10 @@ section {
 
 .article:hover { box-shadow: 0 10px 20px 0 #0006; }
 
-.article a { text-decoration: none; }
+.article a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
 .article h2 {
   margin: 0;
@@ -62,9 +88,11 @@ section {
 .article p {
   margin: 0;
   padding: 20px;
+  overflow: hidden;
   border-radius: 0 0 20px 20px;
   background-color: #16b;
   color: #ccc;
+  text-indent: 2em;
 }
 
 footer {
