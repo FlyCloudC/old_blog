@@ -6,8 +6,12 @@ nav: true
 <div class="row">
   <section class="sidebar-sec">
     <div class="sidebar">
-      <img class="avatar" width="100px" height="100px" src="https://graph.baidu.com/thumb/343366187,1313656684.jpg"></img>
-      <p>一个普通又平凡的OIer</br>偶尔刷刷算法题</br>或者看一些杂七杂八的东西</p>
+      <img class="avatar" width="100px" height="100px" src="https://graph.baidu.com/thumb/343366187,1313656684.jpg">
+      <p>
+        一个普通又平凡的OIer
+        偶尔刷刷算法题
+        或者看一些杂七杂八的东西
+      </p>
     </div>  
   </section>
   <section class="article-sec">
