@@ -1,0 +1,29 @@
+---
+layout: default
+title: Test
+---
+<h2>About</h2>
+<script>
+let aj = new XMLHttpRequest();
+alert(aj);
+function xd() {
+  alert(1);
+  aj.onreadystatechange = () => {
+    alert(aj.readyState+" "+aj.status);
+    if (aj.readyState == 4 && aj.status == 200)
+      alert(aj.responseText);
+  }
+  alert(2);
+  aj.open("GET", "/assets/text.txt", true);
+  aj.send();
+  alert(3);
+}
+function xe(){
+  evel(document.getElementById("in").value);
+}
+</script>
+<a onclick="xe()">r</a>
+<button onclick="xd()">test ajax</button>
+<button onclick="alert()">test</button>
+<input id="in">
+<div id="myDiv">aa</div>
