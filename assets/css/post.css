@@ -14,3 +14,12 @@
 }
 
 .post-content { padding: 20px; }
+
+.post-info {
+  margin: 0;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
+  background-color: #2af;
+  text-align: right;
+  font-style: oblique;
+}
