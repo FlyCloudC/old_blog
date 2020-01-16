@@ -37,11 +37,11 @@ nav a:hover { background-color: #0c5fb0; }
 
 .sidebar-sec { width: 25%; }
 
-.article-sec { width: 60%; }
+.main-sec { width: 60%; }
 
 @media screen and (max-width: 700px) {
   .sidebar-sec { display: none; }
-  .article-sec { width: 80%; }
+  .main-sec { width: 80%; }
 }
 
 .sidebar {
@@ -61,38 +61,6 @@ nav a:hover { background-color: #0c5fb0; }
   display: block;
   border: 3px solid #258;
   border-radius: 50%;
-}
-
-.article {
-  margin: 50px 0;
-  border-radius: 20px;
-  transition: 0.3s;
-  box-shadow: 0 5px 10px 0 #0006;
-}
-
-.article:hover { box-shadow: 0 10px 20px 0 #0006; }
-
-.article a {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.article h2 {
-  margin: 0;
-  padding: 20px;
-  border-radius: 20px 20px 0 0;
-  background-color: #0847a0;
-  color: #fff;
-}
-
-.article p {
-  margin: 0;
-  padding: 20px;
-  overflow: hidden;
-  border-radius: 0 0 20px 20px;
-  background-color: #16b;
-  color: #ccc;
-  text-indent: 2em;
 }
 
 footer {

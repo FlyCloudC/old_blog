@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | append: " | FlyCloudC Blog" }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/index.css" | prepend: site.baseurl }}">
+    {% if page.date %}
+    <link rel="stylesheet" href="{{ "/assets/css/post.css" | prepend: site.baseurl }}">
+    {% else %}{% if page.css %}
+    <link rel="stylesheet" href="{{ "/assets/css/" | prepend: site.baseurl }}{{ page.css }}.css">
+    {% endif %}{% endif %}
   </head>
   <body>
     <nav>
@@ -13,7 +18,21 @@
       <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
       {% endif %}{% endfor %}
     </nav>
-    {{ content }}
+    <div class="row">
+      <section class="sidebar-sec">
+        <div class="sidebar">
+          <img class="avatar" width="100px" height="100px" src="https://graph.baidu.com/thumb/343366187,1313656684.jpg">
+          <p>
+            一个普通又平凡的OIer
+            偶尔刷刷算法题
+            或者看一些杂七杂八的东西
+          </p>
+        </div>  
+      </section>
+      <section class="main-sec">
+        {{ content }}
+      </section>
+    </div>
     <footer>
       Copyright &copy FLYC飘云 2020
     </footer>

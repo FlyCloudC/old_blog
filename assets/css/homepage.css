@@ -1,0 +1,31 @@
+.article {
+  margin: 50px 0;
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px 0 #0006;
+}
+
+.article:hover { box-shadow: 0 10px 20px 0 #0006; }
+
+.article a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.article h2 {
+  margin: 0;
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  background-color: #0847a0;
+  color: #fff;
+}
+
+.article p {
+  margin: 0;
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 0 0 20px 20px;
+  background-color: #16b;
+  color: #ccc;
+  text-indent: 2em;
+}
