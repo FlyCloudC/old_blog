@@ -6,14 +6,11 @@
   box-shadow: 0 5px 10px 0 #0006;
 }
 
-.post h1 {
-  margin: 0;
+.post-title {
   padding: 20px;
   border-radius: 20px 20px 0 0;
   background-color: #0847a0;
   color: #fff;
 }
 
-.content {
-  padding: 20px;
-}
+.post-content { padding: 20px; }
