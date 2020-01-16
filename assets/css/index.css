@@ -41,7 +41,7 @@ nav a:hover { background-color: #0c5fb0; }
 
 @media screen and (max-width: 700px) {
   .sidebar-sec { display: none; }
-  .main-sec { width: 80%; }
+  .main-sec { width: 95%; }
 }
 
 .sidebar {

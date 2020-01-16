@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | append: " | FlyCloudC Blog" }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/index.css" | prepend: site.baseurl }}">
-    {% if page.date %}
-    <link rel="stylesheet" href="{{ "/assets/css/post.css" | prepend: site.baseurl }}">
-    {% else %}{% if page.css %}
+    {% if page.css %}
     <link rel="stylesheet" href="{{ "/assets/css/" | prepend: site.baseurl }}{{ page.css }}.css">
-    {% endif %}{% endif %}
+    {% endif %}
   </head>
   <body>
     <nav>
