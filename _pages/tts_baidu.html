@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>百度语音合成 -- FLYC飘云</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0; ">
+    <script>
+let audio, show;
+let key = ["tex", "spd", "pit", "vol", "per"];
+let value= [];
+
+function dg(x){return document.getElementById(x);}
+
+window.onload = function(){
+    audio = dg("au");
+    show = dg("showurl");
+    for(let i = 0; i < key.length; ++i) value[i] = dg(key[i]);
+}
+
+function say(){
+    let url =  "http://tts.baidu.com/text2audio?cuid=baike&lan=zh&ctp=1&pdt=301";
+    for(let i = 0; i < key.length; ++i)
+        if(value[i].value)
+            url += "&" + key[i] + "=" + value[i].value;
+    audio.src = url;
+    show.innerHTML = encodeURI(url);
+}
+    </script>
+    <style>.show { word-break:break-all; }</style>
+  </head>
+  <body>
+    <p>
+      语速、音调、音量：默认 5 ，范围 0 ~ 15</br>
+      发音人：0 普通女声，1 普通男生，2 度逍遥，3 男声，4 度丫丫，5 女声，6 男声
+    </p>
+    <p>
+    文本：<input id="tex"></br>
+    语速：<input id="spd"></br>
+    音调：<input id="pit"></br>
+    音量：<input id="vol"></br>
+    发音人：<input id="per"></br>
+    <button onclick="say()">播放</button>
+    <audio id="au" controls="controls" autoplay="autoplay"></audio>
+    </p>
+    <p class="show" id="showurl"></p>
+  </body>
+</html>
