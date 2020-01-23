@@ -1,51 +1,45 @@
-﻿
-<!DOCTYPE html>
-<html lang="zh-CN">
+﻿<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | FlyCloudC Blog</title>
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/post.css">
-    <script src="assets/css/index.js"></script>
+    <title>百度语音合成 -- FLYC飘云</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=0; ">
+    <script>let audio, show;
+let key = ["tex", "spd", "pit", "vol", "per"];
+let value= [];
+
+function dg(x){return document.getElementById(x);}
+
+window.onload = function(){
+    audio = dg("au");
+    show = dg("showurl");
+    for(let i = 0; i < key.length; ++i) value[i] = dg(key[i]);
+}
+
+function say(){
+    let url =  "http://tts.baidu.com/text2audio?cuid=baike&lan=zh&ctp=1&pdt=301";
+    for(let i = 0; i < key.length; ++i)
+        if(value[i].value)
+            url += "&" + key[i] + "=" + value[i].value;
+    audio.src = url;
+    show.innerHTML = encodeURI(url);
+}</script>
+    <style>.show { word-break:break-all; }</style>
   </head>
   <body>
-    <nav>
-      <a href="/htmls/about.html">About</a>
-      <a href="/">Home</a>
-    </nav><div class="row">
-
-    <section class="sidebar-sec">
-      <div class="sidebar">
-        <img class="avatar" width="100px" height="100px" src="https://graph.baidu.com/thumb/343366187,1313656684.jpg"></img>
-        <p>一个普通又平凡的OIer</br>偶尔刷刷算法题</br>或者看一些杂七杂八的东西</p>
-      </div>  
-    </section>
-
-    <section class="main-sec">
-      <div class="post">
-        <h1 class="post-title">My first blog</h1>
-        <div class="post-content">
-        <h1>我的第一篇博客</h1>
-        <p>
-从2020.01.05一直到2020.01.13，断断续续建了8天
-好久以前就有自己搭博客的想法，在百度上找资料，始终找不到满意的
-大部分的都需要自己购买(租)服务器和域名，要么就是只能发文章，不能随心所欲的编辑html。后来想想，天底下哪有这样的大好事。
-结果还真有。。。
-感谢Github，Github Pages真是业界良心！！
-本来是打算直接fork BY ...从2020.01.05一直到2020.01.13，断断续续建了8天
-好久以前就有自己搭博客的想法，在百度上找资料，始终找不到满意的
-大部分的都需要自己购买(租)服务器和域名，要么就是只能发文章，不能随心所欲的编辑html。后来想想，天底下哪有这样的大好事。
-结果还真有。。。</p>
-        </div>
-        <p class="post-info">
-          发布于 2020年 01月 13日
-        </p>
-      </section>
-    </div>
-    <footer>
-      Copyright &copy FLYC飘云 2020
-    </footer>
+    <p>
+      语速、音调、音量：默认 5 ，范围 0 ~ 15</br>
+      发音人：0 普通女声，1 普通男生，2 度逍遥，3 男声，4 度丫丫，5 女声，6 男声
+    </p>
+    <p>
+    文本：<input id="tex"></br>
+    语速：<input id="spd"></br>
+    音调：<input id="pit"></br>
+    音量：<input id="vol"></br>
+    发音人：<input id="per"></br>
+    <button onclick="say()">播放</button>
+    <audio id="au" controls="controls" autoplay="autoplay"></audio>
+    </p>
+    <p class="show" id="showurl"></p>
   </body>
 </html>
