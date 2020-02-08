@@ -1,9 +1,7 @@
 ---
 layout: post
-title: New features in es6
+title: ECMAScript6 新特性
 ---
-
-# ECMAScript6新特性
 
 这几天趁着有电脑用，用ES6重写了之前写的几个网页，在重写的过程中学到了几个ES6的技巧，所以来记录一下。
 
@@ -42,7 +40,7 @@ let x = `今天是${year}年${month}月${day}日`;
 
 ## for...of 循环
 
-声明一个循环变量，类似迭代器的作用，可以遍历数组里的每个元素
+声明一个循环变量，该变量会取遍数组里的每个元素。
 
 ```javascript
 var arr = [2, 3, 3, 3, 3];
@@ -58,7 +56,7 @@ for(var i in arr) sum += arr[i];
 for(let x of arr) sum += x;
 ```
 
-当你循环中用到`i`的地方全部都是`arr[i]`时，不妨用for...of试试
+当你循环中用到i的地方全部都是arr[i]时，不妨用for...of试试。
 
 ## 箭头函数
 
@@ -68,9 +66,7 @@ for(let x of arr) sum += x;
 var arr = [2, 3, 4 ,5, 6];
 
 //ES5
-arr.map(function (x) {
-  return x * x;
-});
+arr.map(function (x) { return x * x; });
 
 //ES6
 arr.map(x => x * x);
@@ -167,11 +163,11 @@ button.onclick = ({ offsetX: x , offsetY: y }) => {
 
 ## 数据结构Map和Set
 
-前面都是语法上的优化，而这个是性能上的优化。
+前面多是语法上的优化，而这个是性能上的优化。
 
-在ES6中，新增加了几种数据结构，用于储存集合(Set)或键值对(Map)。Map和Set的内部实现是Hash表，也就是说可以进行O(1)的增删改查。而数组如果要在任意位置插入或删除一个元素的时间复杂度是O(n)。
+在ES6中，新增加了几种数据结构，用于储存集合(Set)或键值对(Map)。
 
-所以，在需要不停增加或删除的场合，Map和Set就排上了用场。
+Map和Set的内部实现是Hash表，也就是说可以进行O(1)的增删改查。而数组如果要在任意位置插入或删除一个元素的时间复杂度是O(n)。所以，在需要不停增加或删除的场合，Map和Set就排上了用场。
 
 此外，Map和Set也支持for...of循环，Set返回的是单个元素，Map返回的是键值对数组。
 
