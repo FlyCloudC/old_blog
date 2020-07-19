@@ -17,8 +17,7 @@
 </head>
   <body>
     <nav>
-      <a href="/Utils-and-Games">Games</a>
-      <a href="/Utils-and-Games">Utils</a>
+      <a href="/Utils-and-Games">Others</a>
       {% for page in site.pages %}{% if page.nav %}
       <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
       {% endif %}{% endfor %}
@@ -26,9 +25,9 @@
     <div class="row">
       <section class="sidebar-sec">
         <div class="sidebar">
-          <img class="avatar" width="100px" height="100px" src="https://graph.baidu.com/thumb/343366187,1313656684.jpg">
+          <img class="avatar" width="100px" height="100px" src="{{ "/assets/avatar.jpg" | prepend: site.baseurl }}">
           <p>
-            一个普通又平凡的OIer</br>
+            一个即将退役的OIer</br>
             偶尔刷刷算法题</br>
             或者学一些杂七杂八的东西
           </p>
