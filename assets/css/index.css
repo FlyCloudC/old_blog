@@ -72,6 +72,15 @@ nav a:hover {
 	text-align: center;
 }
 
+.sidebar a {
+	text-decoration: none;
+	color: #4afb;
+}
+
+.sidebar a:hover {
+	color: #4af;
+}
+
 .avatar {
 	margin: 50px auto;
 	display: block;
