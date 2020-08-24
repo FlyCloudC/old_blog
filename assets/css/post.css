@@ -1,25 +1,27 @@
 .post {
-  margin: 50px 0;
-  border-radius: 20px;
-  background-color: #6cf;
-  transition: 0.3s;
-  box-shadow: 0 5px 10px 0 #0006;
+	margin: 50px 0;
+	border-radius: 20px;
+	background-color: #6cf;
+	transition: 0.3s;
+	box-shadow: 0 5px 10px 0 #0006;
 }
 
 .post-title {
-  padding: 20px;
-  border-radius: 20px 20px 0 0;
-  background-color: #0847a0;
-  color: #fff;
+	padding: 20px;
+	border-radius: 20px 20px 0 0;
+	background-color: #0847a0;
+	color: #fff;
 }
 
-.post-content { padding: 0 20px; }
+.post-content {
+	padding: 0 20px;
+}
 
 .post-info {
-  margin: 0;
-  padding: 20px;
-  border-radius: 0 0 20px 20px;
-  background-color: #2af;
-  text-align: right;
-  font-style: oblique;
+	margin: 0;
+	padding: 20px;
+	border-radius: 0 0 20px 20px;
+	background-color: #2af;
+	text-align: right;
+	font-style: oblique;
 }

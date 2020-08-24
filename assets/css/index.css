@@ -1,71 +1,87 @@
 ﻿html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-body { background-color: #3ad;}
+body {
+	background-color: #3ad;
+}
 
 nav {
-  position: sticky;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  background-color: #19388a;
+	position: sticky;
+	top: 0;
+	overflow: hidden;
+	width: 100%;
+	background-color: #19388a;
 }
 
 nav a {
-  display: block;
-  float: right;
-  width: 60px;
-  padding: 10px 14px;
-  transition: 0.3s;
-  color: #fff;
-  font-size: 1.2em;
-  text-align: center;
-  text-decoration: none;
+	display: block;
+	float: right;
+	width: 60px;
+	padding: 10px 14px;
+	transition: 0.3s;
+	color: #fff;
+	font-size: 1.2em;
+	text-align: center;
+	text-decoration: none;
 }
 
-nav a:hover { background-color: #0c5fb0; }
+nav a:hover {
+	background-color: #0c5fb0;
+}
 
 .row {
-  min-height: 100%;
-  display: flex;
-  justify-content: space-around;
+	min-height: 100%;
+	display: flex;
+	justify-content: space-around;
 }
 
-.sidebar-sec { width: 25%; }
+.sidebar-sec {
+	width: 25%;
+}
 
-.main-sec { width: 60%; }
+.main-sec {
+	width: 60%;
+}
 
 @media screen and (max-width: 700px) {
-  .sidebar-sec { display: none; }
-  .main-sec { width: 95%; }
+	.row {
+		flex-direction: column;
+		align-items: center;
+	}
+	.sidebar-sec {
+		width: 95%;
+	}
+	.main-sec {
+		width: 95%;
+	}
 }
 
 .sidebar {
-  margin: 50px 0;
-  padding: 20px;
-  border-radius: 20px;
-  background-color: #135;
-  color: #eee;
-  transition: 0.3s;
-  box-shadow: 0 5px 10px 0 #0006;
-  font-family: "SimHei";
-  text-align: center;
+	margin: 50px 0;
+	padding: 20px;
+	border-radius: 20px;
+	background-color: #135;
+	color: #eee;
+	transition: 0.3s;
+	box-shadow: 0 5px 10px 0 #0006;
+	font-family: "SimHei";
+	text-align: center;
 }
 
 .avatar {
-  margin: 50px auto;
-  display: block;
-  border: 3px solid #258;
-  border-radius: 50%;
+	margin: 50px auto;
+	display: block;
+	border: 3px solid #258;
+	border-radius: 50%;
 }
 
 footer {
-  padding: 20px 0;
-  background-color: #19388a;
-  color: #fff;
-  text-align: center;
+	padding: 20px 0;
+	background-color: #19388a;
+	color: #fff;
+	text-align: center;
 }
